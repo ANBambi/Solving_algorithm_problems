@@ -122,6 +122,28 @@
 
 이는 `cpp를 기준`으로 `algorithm 헤더`에 `std::lower_bound`, `std::upper_bound`라는 함수로 구현되어 있음
 
+```C++
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 4, 4, 5, 6, 7};
+
+    // lower_bound 사용 예시
+    auto lower = std::lower_bound(vec.begin(), vec.end(), 4);
+    std::cout << "Lower Bound: " << std::distance(vec.begin(), lower) << std::endl;
+
+    // upper_bound 사용 예시
+    auto upper = std::upper_bound(vec.begin(), vec.end(), 4);
+    std::cout << "Upper Bound: " << std::distance(vec.begin(), upper) << std::endl;
+
+    return 0;
+}
+```
+
+<br>
+
 1.  lower_bound
 
         v[i-1] < k <= v[i]인 i를 찾아주는 함수
@@ -138,7 +160,7 @@
 
         만약, v의 모든 원소가 k보다 '작거나 같다면' v의 마지막 다음 칸의 위치 반환
 
-### lower_bound, upper_bound 구현
+### lower_bound, upper_bound 구현 (Python.ver)
 
 ```python
 def lower_bound(arr, x):
