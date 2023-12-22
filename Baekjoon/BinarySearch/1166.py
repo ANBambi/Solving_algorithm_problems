@@ -2,31 +2,15 @@
 # 1166번 선물
 # 슈도코드
 
-# 함수 isPossible(중간, 길이, 갯수):
-#     mid 길이로 만들 수 있는 선물의 수가 주어진 개수보다 크거나 같은지 확인
-
-# 함수 binarySearch(길이, 박스갯수):
-#     시작점, 끝점 = 1, length
-
-#     결과 = 0
-#     while 시작점 <= 끝점:
-#         mid = (시작점 + 끝점) // 2
-
-#         if isPossible(중간, 길이, 갯수):
-#             결과 = mid
-#             시작점 = mid + 1
-#         else:
-#             끝점 = mid - 1
-
-#     결과 반환
-
-# 함수 main():
-#     length, Count(박스갯수)
-
-#     결과 = binarySearch(길이, 박스갯수)
-#     결과 출력
-
-# main 함수 실행
+# 입력으로 큐브의 개수 n과 각 큐브의 길이 l, w, h를 받음
+# 이분 탐색을 위한 시작점 start를 0으로, 끝점 end를 max(l, w, h)로 초기화
+# 결과를 저장할 변수 result를 0으로 초기화
+# 100,000번 반복
+#    현재 범위의 중간값을 계산하여 변수 mid에 저장
+#    mid를 이용하여 큐브의 개수 cnt를 계산
+#    cnt가 목표 개수 n 이상이면 결과 result를 mid로 업데이트하고 범위를 오른쪽으로 좁힘 (start = mid)
+#    cnt가 목표 개수 n 미만이면 범위를 왼쪽으로 좁힘 (end = mid)
+# 최종 결과 result를 소수점 10자리까지 출력
 
 n, l, w, h = map(int, input().split())
 
