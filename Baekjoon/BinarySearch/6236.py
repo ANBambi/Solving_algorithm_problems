@@ -6,11 +6,6 @@ import sys
 
 
 def isPossible(least, k, withdraws):
-    """
-    least : 현재까지 계산한 K번째 최소 금액
-    K : 지출횟수
-    withdraws : 일별 지출액 리스트
-    """
     totalWithdraw = 0
     count = 1
 
@@ -26,12 +21,6 @@ def isPossible(least, k, withdraws):
 
 
 def binarySearch(start, end, k, withdraws):
-    """
-    start: 이분 탐색 시작값
-    end: 이분 탐색 종료값
-    k: 지출 횟수
-    withdraws: 일별 지출액 리스트
-    """
     result = 0
 
     while start <= end:
