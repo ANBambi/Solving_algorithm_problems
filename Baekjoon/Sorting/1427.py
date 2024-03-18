@@ -12,7 +12,7 @@
 
 import sys
 
-print = sys.stdin.readline
+print = sys.stdout.write
 
 A = list(input())
 
