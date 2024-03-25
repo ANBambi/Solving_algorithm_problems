@@ -32,6 +32,7 @@
 
 ## 3. 내림차순 선택정렬 예시 코드
 
+```python
     # 슈도 코드
 
     A(자릿수별로 구분해 저장한 리스트)
@@ -43,9 +44,11 @@
         현재 i의 값과 Max 값 중 Max 값이 더 크면 swap 수행
 
     A 리스트 출력
+```
 
 <br>
 
+```python
     # 구현 코드
     import sys
     print = sys.stdout.write
@@ -63,3 +66,4 @@
 
     for i in range(len(A)):
         print(A[i])
+```
