@@ -16,7 +16,9 @@
 # for m만큼 반복:
 #     질의에 대한 결과 계산 및 출력
 #     결과 = D[x2][y2] - D[x1-1][y2] - D[x2][y1-1] + D[x1-1][y1-1]
+import sys
 
+input = sys.stdin.readline
 N, M = map(int, input().split())
 A = [[0] * (N + 1)]
 D = [[0] * (N + 1) for _ in range(N + 1)]
