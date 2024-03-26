@@ -29,7 +29,7 @@ input = sys.stdin.readline
 N, M = map(int, input().split())
 A = list(map(int, input().split()))
 S = [0] * N
-C = [0] * N
+C = [0] * M
 S[0] = A[0]
 answer = 0
 
