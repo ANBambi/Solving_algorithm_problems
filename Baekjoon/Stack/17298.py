@@ -18,11 +18,10 @@
 import sys
 
 input = sys.stdin.readline
-print = sys.stdout.write
 
-N = int(input())
+N = int(input().strip())
 ans = [0] * N
-A = list(map(int, input().split()))
+A = list(map(int, input().strip().split()))
 myStack = []
 
 for i in range(N):
@@ -37,9 +36,5 @@ while myStack:
     # 스택에 쌓인 index에 -1을 넣기
     ans[myStack.pop()] = -1
 
-result = ""
-
-for i in range(N):
-    result += str(ans[i]) + " "
-
+result = " ".join(map(str, ans))
 print(result)
