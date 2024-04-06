@@ -27,7 +27,6 @@ input = sys.stdin.readline
 N = int(input())
 
 
-# 소수 구하기 함수
 def isPrime(num):
     for i in range(2, int(num / 2 + 1)):
         if num % i == 0:
@@ -46,7 +45,6 @@ def DFS(number):
                 DFS(number * 10 + i)
 
 
-# 일의 자리 소수는 2, 3, 5, 7 이므로 4가지 수 에서만 시작
 DFS(2)
 DFS(3)
 DFS(5)
