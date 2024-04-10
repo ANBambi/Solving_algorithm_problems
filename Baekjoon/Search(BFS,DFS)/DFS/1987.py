@@ -1,8 +1,8 @@
 # 작성일자 : 2024-04-09 TUE, 작성자 : 이민영
 # 백준 1987번 알파벳
-# 슈도코드
-import sys
+# Python 은 불가능, PyPy3으로만 가능했음
 
+import sys
 
 input = sys.stdin.readline
 
@@ -49,8 +49,9 @@ def DFS(x, y, n):
         DFS(x + 1, y, n + 1)
         visited[idx] = 0
 
-    answer = 1
-    visited[-1] = 1
-    visited[ord(L[1][1]) - 65] = 1
-    DFS(1, 1, 1)
-    print(answer)
+
+answer = 1
+visited[-1] = 1
+visited[ord(L[1][1]) - 65] = 1
+DFS(1, 1, 1)
+print(answer)
