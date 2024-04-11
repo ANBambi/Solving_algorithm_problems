@@ -3,7 +3,7 @@
 # 슈도 코드
 
 N = int(input())
-prime_number = 0
+prime_number_count = 0
 numbers = list(map(int, input().split()))
 
 
@@ -16,6 +16,6 @@ def isPrime(Number):
 
 for i in range(N):
     if isPrime(numbers[i]) and numbers[i] != 1:
-        prime_number += 1
+        prime_number_count += 1
 
-print(prime_number)
+print(prime_number_count)
